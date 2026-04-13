@@ -2,27 +2,27 @@
 const categories = [
   {
     name: "Languages",
-    icon: "💻",
+    icon: "",
     skills: ["Python", "JavaScript", "TypeScript", "SQL"]
   },
   {
     name: "Backend",
-    icon: "⚙️",
+    icon: "",
     skills: ["Django", "FastAPI", "REST APIs", "PostgreSQL"]
   },
   {
     name: "Frontend",
-    icon: "🎨",
+    icon: "",
     skills: ["Vue.js", "Bootstrap", "HTML5", "CSS3"]
   },
   {
     name: "DevOps",
-    icon: "🚀",
+    icon: "",
     skills: ["Docker", "Jenkins", "CI/CD", "Git"]
   },
   {
     name: "AI & Data",
-    icon: "🤖",
+    icon: "",
     skills: ["Pandas", "Scikit-learn", "NLP", "Recommendation Systems"]
   }
 ]
