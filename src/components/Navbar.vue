@@ -1,62 +1,24 @@
-<script setup lang="ts">
-import { ref, onMounted } from 'vue'
-
-const isDark = ref(false)
-
-const initializeTheme = () => {
-  const savedTheme = localStorage.getItem('theme')
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-  const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
-
-  if (shouldBeDark) {
-    document.documentElement.classList.add('dark')
-    isDark.value = true
-  } else {
-    document.documentElement.classList.remove('dark')
-    isDark.value = false
-  }
-}
-
-onMounted(() => {
-  initializeTheme()
-})
-
-const toggleTheme = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-    localStorage.setItem('theme', 'dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-    localStorage.setItem('theme', 'light')
-  }
-}
-</script>
-
 <template>
-  <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm z-50">
+  <nav class="fixed w-full z-50 transition-all duration-300" :class="scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1
-        class="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
-      >
-        Brian Bultut Chepyegon
-      </h1>
+      <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">
+        Brian.
+      </a>
 
       <div class="flex items-center space-x-6">
         <div class="space-x-6 hidden md:flex">
-          <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
+          <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium"
             >About</a
           >
-          <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
+          <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium"
             >Skills</a
           >
           <a
             href="#projects"
-            class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
+            class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium"
             >Projects</a
           >
-          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition"
+          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium"
             >Contact</a
           >
         </div>
@@ -64,7 +26,7 @@ const toggleTheme = () => {
         <!-- Theme Toggle Button -->
         <button
           @click="toggleTheme"
-          class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+          class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           aria-label="Toggle theme"
         >
           <svg
@@ -102,3 +64,44 @@ const toggleTheme = () => {
     </div>
   </nav>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+const isDark = ref(false)
+const scrolled = ref(false)
+
+const initializeTheme = () => {
+  const savedTheme = localStorage.getItem('theme')
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
+
+  if (shouldBeDark) {
+    document.documentElement.classList.add('dark')
+    isDark.value = true
+  } else {
+    document.documentElement.classList.remove('dark')
+    isDark.value = false
+  }
+}
+
+onMounted(() => {
+  initializeTheme()
+  
+  window.addEventListener('scroll', () => {
+    scrolled.value = window.scrollY > 50
+  })
+})
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  if (isDark.value) {
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }
+}
+</script>
