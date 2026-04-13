@@ -4,6 +4,7 @@ const projects = [
     title: "CV Bulk Import System",
     tech: "Django • Vue 3 • PostgreSQL • Celery • Redis",
     description: "Enterprise-grade bulk CV import system with validation, duplicate detection, and async processing. Features a Django REST API backend, Vue 3 frontend, and background worker agent.",
+    image: "/bulk data analysis.jpg",
     repos: [
       { name: "UI", url: "https://github.com/Bultut-yegon/Data-ingestion-UI" },
       { name: "Server", url: "https://github.com/Bultut-yegon/Data-ingestion-server" },
@@ -20,12 +21,14 @@ const projects = [
     title: "Loan Tracking System",
     tech: "PHP • MySQL",
     description: "Relational database-driven financial management application.",
+    image: "/Loans.jpg",
     repo: "https://github.com/Bultut-yegon/Improved_loan-system"
   },
   {
     title: "FastAPI Recommendation Service",
     tech: "FastAPI • Docker • AI",
     description: "API-first recommendation engine with model inference endpoint.",
+    image: "/recommendation.jpg",
     repo: "https://github.com/Bultut-yegon/Vocalearn_lms_ai_service"
   }
 ]
@@ -47,8 +50,14 @@ const projects = [
         :key="project.title"
         class="group bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300"
       >
-        <div class="h-48 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
-          <svg class="w-16 h-16 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+          <img 
+            v-if="project.image" 
+            :src="project.image" 
+            :alt="project.title"
+            class="w-full h-full object-cover"
+          >
+          <svg v-else class="w-16 h-16 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
         </div>
