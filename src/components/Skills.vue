@@ -13,7 +13,7 @@ const categories = [
   {
     name: "Frontend",
     icon: "",
-    skills: ["Vue.js", "Bootstrap", "HTML5", "CSS3"]
+    skills: ["Vue.js", "React", "Bootstrap", "HTML5", "CSS3"]
   },
   {
     name: "DevOps",
@@ -30,7 +30,7 @@ const categories = [
 
 <template>
   <section id="skills" class="py-24 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto px-6">
+    <div v-reveal class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-sm font-semibold text-purple-600 mb-2 tracking-wider uppercase">Skills</h2>
         <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">

@@ -7,9 +7,16 @@
     
     <div class="text-center px-6 relative z-10">
       <p class="text-sm md:text-base font-medium mb-4 text-purple-400 tracking-wider uppercase">Hello, I'm</p>
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
-        Brian Bultut
-      </h1>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7 mb-4">
+        <img
+          src="/pic1.png"
+          alt="Brian Bultut"
+          class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-purple-400/60 shadow-2xl shadow-purple-500/30"
+        />
+        <h1 class="text-5xl md:text-7xl font-bold text-white">
+          Brian Bultut
+        </h1>
+      </div>
       <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light">
         Backend Engineer • ML Enthusiast • System Designer
       </p>

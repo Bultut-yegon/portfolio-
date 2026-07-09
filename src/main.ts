@@ -1,20 +1,8 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
-
-// createApp(App).mount('#app')
-
-
-
 import { createApp } from 'vue'
 import App from './App.vue'
 import './style.css'
+import { reveal } from './directives/reveal'
 
-
-createApp(App).mount('#app')
-
-// import { createApp } from 'vue'
-// import App from './App.vue'
-// import './style.css' // <-- your Tailwind CSS
-
-// createApp(App).mount('#app')
-
+const app = createApp(App)
+app.directive('reveal', reveal)
+app.mount('#app')

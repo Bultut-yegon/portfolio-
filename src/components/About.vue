@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="py-24 bg-white dark:bg-gray-900">
-    <div class="max-w-5xl mx-auto px-6">
+    <div v-reveal class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-sm font-semibold text-purple-600 mb-2 tracking-wider uppercase">About Me</h2>

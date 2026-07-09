@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="py-24 bg-gray-900 dark:bg-gray-900">
-    <div class="max-w-4xl mx-auto px-6 text-center">
+    <div v-reveal class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-sm font-semibold text-purple-400 mb-2 tracking-wider uppercase">Contact</h2>
       <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
         Let's Work Together

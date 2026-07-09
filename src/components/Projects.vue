@@ -1,6 +1,16 @@
 <script setup>
 const projects = [
   {
+    title: "FundingHub — AI Funding Matcher",
+    tech: "React • FastAPI • PostgreSQL • Scikit-learn",
+    description: "AI-powered platform that matches users with scholarships, research grants, startup funding, and government tenders. Includes a recommendation engine, success predictor, proposal writer, and admin analytics dashboard.",
+    image: "/fundinghub.png",
+    repos: [
+      { name: "Frontend", url: "https://github.com/Bultut-yegon/Funding_frontend" },
+      { name: "Backend", url: "https://github.com/Bultut-yegon/Funding_Backend" }
+    ]
+  },
+  {
     title: "CV Bulk Import System",
     tech: "Django • Vue 3 • PostgreSQL • Celery • Redis",
     description: "Enterprise-grade bulk CV import system with validation, duplicate detection, and async processing. Features a Django REST API backend, Vue 3 frontend, and background worker agent.",
@@ -36,7 +46,7 @@ const projects = [
 
 <template>
   <section id="projects" class="py-24 bg-white dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-6">
+    <div v-reveal class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-sm font-semibold text-purple-600 mb-2 tracking-wider uppercase">Projects</h2>
         <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">

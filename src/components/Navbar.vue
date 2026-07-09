@@ -2,7 +2,6 @@
   <nav class="fixed w-full z-50 transition-all duration-300" :class="scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">
-        <img src="/pic1.png" alt="Logo" class="h-12 w-12 rounded-full"></img> <hr>
           Bultut.
       </a>
 
