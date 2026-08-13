@@ -11,9 +11,9 @@ const projects = [
     ]
   },
   {
-    title: "CV Bulk Import System",
+    title: "CSV Bulk Import System",
     tech: "Django • Vue 3 • PostgreSQL • Celery • Redis",
-    description: "Enterprise-grade bulk CV import system with validation, duplicate detection, and async processing. Features a Django REST API backend, Vue 3 frontend, and background worker agent.",
+    description: "Enterprise-grade bulk CSV import system with validation, duplicate detection, and async processing. Features a Django REST API backend, Vue 3 frontend, and background worker agent.",
     image: "/bulk data analysis.jpg",
     repos: [
       { name: "UI", url: "https://github.com/Bultut-yegon/Data-ingestion-UI" },
@@ -21,12 +21,28 @@ const projects = [
       { name: "Agent", url: "https://github.com/Bultut-yegon/Data-ingestion-agent" }
     ]
   },
-  {
-    title: "Agricultural AI Prediction System",
-    tech: "Django • ML • PostgreSQL",
-    description: "Machine learning-driven backend system for rainfall and soil prediction.",
-    repo: ""
-  },
+
+  
+{
+  title: "MemoryOps – Autonomous Organizational Knowledge Recovery",
+
+  tech: "LangGraph • Groq • DataHub MCP • FastAPI • Next.js • PostgreSQL • Redis • Docker",
+
+  description: "Multi-agent AI system that detects metadata knowledge gaps across enterprise data assets and autonomously reconstructs missing organizational context. MemoryOps combines DataHub metadata, schemas, lineage, ownership signals, and related evidence to generate evidence-backed recovery recommendations with confidence and knowledge-risk scores. Recoveries can be reviewed by humans or safely published back to DataHub, creating a continuous organizational memory layer.",
+
+  image: "/memoryOps.png",
+
+  repos: [
+    {
+      name: "UI",
+      url: "https://github.com/Bultut-yegon/MemoryOps-UI"
+    },
+    {
+      name: "Server",
+      url: "https://github.com/Bultut-yegon/MemoryOps-Server"
+    }
+  ]
+},
   {
     title: "Loan Tracking System",
     tech: "PHP • MySQL",
