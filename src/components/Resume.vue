@@ -6,7 +6,7 @@
     </p>
 
     <a
-      href="/Bultut_Chepyegon_Resume.pdf"
+      href="/Bultut_Bultut_Chepyegon_Resume.pdf"
       download
       class="inline-block px-6 py-3 rounded-lg bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-medium"
     >
