@@ -6,7 +6,7 @@
     </p>
 
     <a
-      href="/public/Resume.pdf"
+      href="/Resume.pdf"
       download
       class="inline-block px-6 py-3 rounded-lg bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-medium"
     >
